@@ -14,3 +14,6 @@ nano /etc/network/interfaces
 
 # einfügen:
 pre-up /root/iptables-restore.sh
+
+# Dienst neustarten:
+systemctl restart networking
