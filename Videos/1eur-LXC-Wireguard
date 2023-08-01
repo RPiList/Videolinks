@@ -13,6 +13,8 @@ nano /root/iptables-restore.sh
 # einfügen:
 iptables -t nat -A PREROUTING -p udp -d 195.90.213.85 --dport 51820 -i vmbr0 -j DNAT --to-destination 192.168.222.111:51820
 
+systemctl restart networking
+
 pct pull 111 /root/WinAdmin.conf /root/WinAdmin.conf
 
 https://www.wireguard.com/install/
