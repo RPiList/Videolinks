@@ -1,3 +1,6 @@
 apt update && apt upgrade -y && apt autoremove -y && apt install curl -y
 
 curl -sSL https://install.pi-hole.net | bash
+
+https://github.com/RPiList/specials/raw/master/teleporter-ALL_2023-07.tar.gz
+https://github.com/RPiList/specials/raw/master/teleporter_ohne-Banken_2023-07.tar.gz
