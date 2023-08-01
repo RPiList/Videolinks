@@ -1,5 +1,7 @@
 wget https://git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh
 
+nano /etc/pve/lxc/111.conf
+
 lxc.cgroup.devices.allow: c 10:200 rwm
 lxc.mount.entry: /dev/net dev/net none bind,create=dir
 
