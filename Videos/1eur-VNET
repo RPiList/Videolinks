@@ -1,5 +1,16 @@
+# Datei erstellen:
+nano /root/iptables-restore.sh
+
+# einfügen:
 iptables -A POSTROUTING -t nat -s 192.168.222.0/24 -j MASQUERADE
 iptables -A POSTROUTING -t nat -s 192.168.222.0/24 -o vmbr0 -j MASQUERADE
 iptables -D POSTROUTING -t nat -s 192.168.222.0/24 -o vmbr0 -j MASQUERADE
 
-iptables-save
+# Datei ausführbar machen:
+chmod +x /root/iptables-restore.sh
+
+# Datei öffnen:
+nano /etc/network/interfaces
+
+# einfügen:
+pre-up /root/iptables-restore.sh
