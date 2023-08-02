@@ -6,14 +6,4 @@ iptables -A POSTROUTING -t nat -s 192.168.222.0/24 -j MASQUERADE
 iptables -A POSTROUTING -t nat -s 192.168.222.0/24 -o vmbr0 -j MASQUERADE
 iptables -D POSTROUTING -t nat -s 192.168.222.0/24 -o vmbr0 -j MASQUERADE
 
-# Datei ausführbar machen:
-chmod +x /root/iptables-restore.sh
-
-# Datei öffnen:
-nano /etc/network/interfaces
-
-# einfügen:
-pre-up /root/iptables-restore.sh
-
-# Dienst neustarten:
-systemctl restart networking
+iptables-save > /etc/iptables/rules.v4
