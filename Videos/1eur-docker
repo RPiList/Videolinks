@@ -1,6 +1,4 @@
-apt update && apt upgrade -y && apt autoremove -y 
-
-apt install curl docker.io -y
+apt update && apt upgrade -y && apt autoremove -y && apt install curl docker.io -y
 
 curl -L https://github.com/docker/compose/releases/download/v$(curl -Ls https://www.servercow.de/docker-compose/latest.php)/docker-compose-$(uname -s)-$(uname -m) > /usr/local/bin/docker-compose
 
