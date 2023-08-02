@@ -1,0 +1,7 @@
+# Datei öffnen:
+nano /root/iptables-restore.sh
+
+# einfügen:
+iptables -t nat -A PREROUTING -p udp -d 195.90.213.85 --dport 51822 -i vmbr0 -j DNAT --to-destination 192.168.222.113:51822
+
+systemctl restart networking
