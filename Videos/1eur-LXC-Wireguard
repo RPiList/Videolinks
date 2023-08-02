@@ -7,13 +7,10 @@ apt update && apt upgrade -y && apt autoremove -y && apt install curl -y
 
 wget https://git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh
 
-# Datei öffnen:
-nano /root/iptables-restore.sh
-
 # einfügen:
 iptables -t nat -A PREROUTING -p udp -d 195.90.213.85 --dport 51820 -i vmbr0 -j DNAT --to-destination 192.168.222.111:51820
 
-systemctl restart networking
+iptables-save > /etc/iptables/rules.v4
 
 pct pull 111 /root/WinAdmin.conf /root/WinAdmin.conf
 
