@@ -6,3 +6,23 @@ chmod +x /usr/local/bin/docker-compose && \
 cd /opt && \
 git clone https://github.com/mailcow/mailcow-dockerized && \
 cd mailcow-dockerized
+
+./generate_config.sh
+nano mailcow.conf
+
+nano docker-compose.yml
+
+Auskommentieren:
+redis-mailcow section:
+# sysctls:
+# - net.core.somaxconn=4096
+
+Ändern:
+dovecot-mailcow section:
+ulimits :
+nproc: 30000 #(Instead of 65535)
+
+ss -tlpn | grep -E -w '25|80|110|143|443|465|587|993|995|4190'
+
+docker-compose pull
+docker-compose up -d
