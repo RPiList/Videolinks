@@ -22,7 +22,7 @@ redis-mailcow section:
 Ändern:
 dovecot-mailcow section:
 ulimits :
-nproc: 30000 #(Instead of 65535)
+nproc: 30000
 
 ss -tlpn | grep -E -w '25|80|110|143|443|465|587|993|995|4190'
 
