@@ -9,4 +9,4 @@
      environment:
        - TZ=Europe/Berlin
        - WATCHTOWER_LIFECYCLE_HOOKS=1 # Enable pre/post-update scripts
-     command: --rm --run-once Namen-Der-Container
+     command: --cleanup --debug --monitor-only --run-once Namen-Der-Container
