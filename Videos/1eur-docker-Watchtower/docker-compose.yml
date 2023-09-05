@@ -9,4 +9,4 @@
      environment:
        - TZ=Europe/Berlin
        - WATCHTOWER_LIFECYCLE_HOOKS=1 # Enable pre/post-update scripts
-     command: --debug true --cleanup true containernames
+     command: --schedule "0 55 5 * * *" Namen-Der-Container
