@@ -1,0 +1,6 @@
+apt update && apt install mc -y
+
+mount.cifs -o user=<Benutzername>,pass=<Passwort> //<Benutzername>.your-storagebox.de/backup /root/storagebox
+
+Backups unter:
+/var/lib/vz/dumps
