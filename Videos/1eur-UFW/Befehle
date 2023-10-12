@@ -3,6 +3,7 @@ iptables -t nat -A PREROUTING -p udp -d 178.254.37.60 --dport 51820 -i vmbr0 -j 
 iptables -t nat -A PREROUTING -p udp -d 178.254.37.60 --dport 51822 -i vmbr0 -j DNAT --to-destination 192.168.222.113:51822
 
 
+apt install ufw -y
 nano /etc/ufw/before.rules
 
 *nat
