@@ -15,3 +15,26 @@ COMMIT
 -A PREROUTING -i vmbr0 -p udp --dport 51820 -j DNAT --to-destination 192.168.222.111:51820
 -A PREROUTING -i vmbr0 -p udp --dport 51822 -j DNAT --to-destination 192.168.222.113:51822
 COMMIT
+
+
+# auskommentieren entfernen von IPv4-Forward:
+nano /etc/sysctl.conf
+nano /etc/ufw/sysctl.conf
+
+
+# UFW Befehle:
+ufw default allow FORWARD
+ufw allow 22
+ufw allow 8006
+ufw allow 51820/udp
+ufw allow 51822/udp
+
+ufw allow in on tailscale0
+ufw allow from 192.168.222.0/24
+
+ufw status verbose
+ufw status numbered
+
+ufw delete (zahl)
+
+ufw disable && ufw enable
