@@ -2,6 +2,9 @@ iptables -A POSTROUTING -t nat -s 192.168.222.0/24 -o vmbr0 -j MASQUERADE
 iptables -t nat -A PREROUTING -p udp -d 178.254.37.60 --dport 51820 -i vmbr0 -j DNAT --to-destination 192.168.222.111:51820
 iptables -t nat -A PREROUTING -p udp -d 178.254.37.60 --dport 51822 -i vmbr0 -j DNAT --to-destination 192.168.222.113:51822
 
+
+nano /etc/ufw/before.rules
+
 *nat
 :POSTROUTING ACCEPT [0:0]
 -A POSTROUTING -s 192.168.222.0/24 -o vmbr0 -j MASQUERADE
