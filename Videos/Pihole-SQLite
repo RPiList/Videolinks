@@ -3,3 +3,5 @@ sqlite3 /etc/pihole/pihole-FTL.db "SELECT DISTINCT domain FROM queries WHERE cli
 sqlite3 /etc/pihole/pihole-FTL.db "SELECT DISTINCT domain FROM queries WHERE client is '192.168.111.144' AND timestamp >= strftime('%s', 'now', '-7 hours');"
 
 sqlite3 /etc/pihole/pihole-FTL.db "SELECT DISTINCT domain FROM queries WHERE client is '192.168.111.144';"
+
+sqlite3 /etc/pihole/pihole-FTL.db "SELECT DISTINCT domain FROM queries WHERE client is '192.168.111.144' AND timestamp >= strftime('%s', 'now', '-7 days');" > info.txt
