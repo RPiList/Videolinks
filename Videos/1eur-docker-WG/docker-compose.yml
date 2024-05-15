@@ -4,11 +4,11 @@ services:
     environment:
       # ⚠️ Required:
       # Change this to your host's public address
-      - WG_HOST=195.90.213.85
+      - WG_HOST=<IP_ODER_DOMAIN_HIER_EINTRAGEN>
 
       # Optional:
       # - PASSWORD=foobar123
-      - WG_PORT=51822
+      # - WG_PORT=51822
       # - WG_DEFAULT_ADDRESS=10.8.0.x
       - WG_DEFAULT_DNS=192.168.222.112
       # - WG_MTU=1420
