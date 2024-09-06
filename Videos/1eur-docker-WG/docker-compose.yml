@@ -7,7 +7,7 @@ services:
       - WG_HOST=<IP_ODER_DOMAIN_HIER_EINTRAGEN>
 
       # Optional:
-      # - PASSWORD=foobar123
+      # - PASSWORD_HASH=$$2a$$12$$fvNOdKwMjyURIYpWzApat.c8HoBgohS0w57th89CNyqa2NcA7KuNC # Passwort ist 123456
       # - WG_PORT=51822
       # - WG_DEFAULT_ADDRESS=10.8.0.x
       - WG_DEFAULT_DNS=192.168.222.112
