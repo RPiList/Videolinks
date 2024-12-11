@@ -2,8 +2,8 @@
   apt update && apt upgrade -y && docker --version && docker-compose --version
 
 2.
-  apt install ca-certificates curl -y && install -m 0755 -d /etc/apt/keyrings 
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc 
+  apt install ca-certificates curl -y && install -m 0755 -d /etc/apt/keyrings && \
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
   chmod a+r /etc/apt/keyrings/docker.asc
 
 3.
