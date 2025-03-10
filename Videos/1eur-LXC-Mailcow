@@ -2,7 +2,7 @@
    apt update && \
    apt upgrade -y && \
    apt autoremove -y && \
-   apt purge postfix -y \
+   apt purge postfix -y
 
 2.
   apt install ca-certificates curl -y && install -m 0755 -d /etc/apt/keyrings && \
