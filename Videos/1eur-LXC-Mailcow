@@ -60,3 +60,4 @@ docker-compose up -d
 -A PREROUTING -i vmbr0 -p tcp --dport 4190 -j DNAT --to-destination 192.168.221.111:4190
 -A POSTROUTING -p tcp --dport 4190 -d 192.168.221.111 -j MASQUERADE
 
+reboot
