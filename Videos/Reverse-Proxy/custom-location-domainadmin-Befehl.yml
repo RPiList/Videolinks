@@ -1,4 +1,3 @@
- location /domainadmin 
-     { 
-       return 301 /; 
+ location /domainadmin { 
+            return 301 /; 
      }
