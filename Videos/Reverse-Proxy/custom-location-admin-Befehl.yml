@@ -1,0 +1,3 @@
+location /admin {
+           return 301 /;
+      }
