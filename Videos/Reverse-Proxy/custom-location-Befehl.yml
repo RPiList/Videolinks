@@ -1,0 +1,6 @@
+location / {
+           return 302 https://$server_name/SOGo$request_uri;
+      }
+      location /SOGo {
+           proxy_pass http://192.168.221.111;
+      }
