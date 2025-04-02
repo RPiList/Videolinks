@@ -1,0 +1,4 @@
+ location /domainadmin 
+     { 
+       return 301 /; 
+     }
