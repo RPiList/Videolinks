@@ -1,0 +1,11 @@
+services:
+  app:
+    image: 'docker.io/jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - /volume1/docker/npm/data:/data
+      - /volume1/docker/npm/letsencrypt:/etc/letsencrypt
