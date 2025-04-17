@@ -1,0 +1,22 @@
+version: "3"
+services:
+  ntfy:
+    image: binwiederhier/ntfy
+    restart: unless-stopped
+    container_name: ntfy
+    command: serve
+    environment:
+      TZ: Europe/Berlin    # optional: Change to your desired timezone
+      NTFY_BASE_URL: http://ntfy.lan
+      NTFY_CACHE_FILE: /var/lib/ntfy/cache.db
+      NTFY_AUTH_FILE: /var/lib/ntfy/auth.db
+      NTFY_AUTH_DEFAULT_ACCESS: deny-all
+      NTFY_BEHIND_PROXY: true
+      NTFY_ATTACHMENT_CACHE_DIR: /var/lib/ntfy/attachments
+      NTFY_ENABLE_LOGIN: true
+    volumes:
+      - /volume1/docker/ntfy/var/cache:/var/lib/ntfy
+      - /volume1/docker/ntfy/etc:/var/lib/ntfy/etc
+    ports:
+      - 8777:80
+
