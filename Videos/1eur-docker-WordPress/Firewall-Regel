@@ -1,0 +1,2 @@
+-A PREROUTING -i vmbr0 -p tcp --dport 80 -j DNAT --to-destination 192.168.234.102:80
+-A POSTROUTING -p tcp --dport 80 -d 192.168.234.102 -j MASQUERADE
