@@ -1,0 +1,12 @@
+# Nutzer erstellen:
+ntfy user add <USERNAME>
+
+# Rechtevergabe für erstellten Nutzer:
+ntfy access <USERNAME> <TOPIC> rw
+
+# Rechtevergabe für alle Nutzer:
+ntfy access everyone <TOPIC> ro
+
+# Hashwert erstellen:
+echo -n '<USERNAME>:<PASSWORT>' | base64
+
