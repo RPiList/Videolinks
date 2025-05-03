@@ -1,0 +1,7 @@
+nano /etc/ufw/before.rules
+
+# Einfügen, vor der Zeile "COMMIT":
+-A PREROUTING -i vmbr0 -p tcp --dport 80 -j DNAT --to-destination 192.168.221.199:80
+-A POSTROUTING -p tcp --dport 80 -d 192.168.221.199 -j MASQUERADE
+-A PREROUTING -i vmbr0 -p tcp --dport 443 -j DNAT --to-destination 192.168.221.199:443
+-A POSTROUTING -p tcp --dport 443 -d 192.168.221.199 -j MASQUERADE
