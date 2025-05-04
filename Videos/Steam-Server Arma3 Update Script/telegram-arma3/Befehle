@@ -1,0 +1,12 @@
+
+BotFather
+
+/newbot
+
+https://api.telegram.org/bot{token}/getUpdates
+
+telegram_chat_id = '-1002368697987'
+token = '717096:AAF1XgXPKLyp3mGtRKMc4WacqrA'
+
+telegramurl = f"https://api.telegram.org/bot{token}/sendMessage?chat_id={telegram_chat_id}&text={data_to_send}"
+requests.get(telegramurl).json()
