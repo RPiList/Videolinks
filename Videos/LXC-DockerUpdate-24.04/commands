@@ -24,7 +24,7 @@ echo \
   reboot
 
 7. 
-  do-release-update
+  do-release-upgrade
 
 
 
