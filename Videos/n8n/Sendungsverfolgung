@@ -1,0 +1,36 @@
+https://www.deutschepost.de/int-verfolgen/data/search?piececode=
+
+Accept
+application/json
+
+User-Agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; de-DE)
+
+
+Accept-Language
+de-DE,de;q=0.9
+
+
+const piececodeRaw = XXX;
+const piececodeSanitized = piececodeRaw.replace(/ /g, '');
+return [{ piececode: piececodeSanitized }];
+
+
+// Hole den eingehenden String aus dem Item (z.B. aus einem vorherigen Node)
+const inputString = $input.first().json.piececode; // Ersetze 'yourFieldName' mit dem tatsächlichen Feldnamen
+
+// Definiere das Regex-Muster
+const regex = /^[0-9A-Fa-f]{20}$/;
+
+// Überprüfe, ob der String gültig ist
+const isValid = regex.test(inputString);
+
+// Je nach Ergebnis passenden Wert zurückgeben
+return [
+  {
+    json: {
+      result: isValid ? inputString : "invalid"
+    }
+  }
+];
+
