@@ -5,6 +5,8 @@ BotFather
 
 https://api.telegram.org/bot{token}/getUpdates
 
+## Die Chat-ID und den Token gegen eigene Tokens austauschen.
+## Der Chat, der Bot und der Token sind ungültig.
 telegram_chat_id = '-1002368697987'
 token = '717096:AAF1XgXPKLyp3mGtRKMc4WacqrA'
 
